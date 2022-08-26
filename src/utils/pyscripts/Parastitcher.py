@@ -245,7 +245,21 @@ def check_flag(params, string, delete):
    size = len(string)
    for line in params:
       tmp = line.find(string)
-      if tmp != -1:
+      
+      # Camilo Laiton: Fix message
+      # Fixing paths in a not elegant way but they have the line[start:] behavior inside the loop
+      # Recommended fix -> Use argschema or argparse
+      
+      check_nums_in_paths = False
+      if string == "-2" or string == "-7":
+         projin = line.find("projin")
+         projout = line.find("projout")
+         volout = line.find("volout")
+         
+         if projin != -1 or projout != -1 or volout != -1:
+            check_nums_in_paths = True
+
+      if tmp != -1 and not check_nums_in_paths:
          start = tmp + size
          sel_string = line[start:]
          if delete :
