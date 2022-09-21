@@ -763,6 +763,8 @@ def read_params():
    #dfmt = read_item(params, '--dfmt=', '"TIFF (tiled, 3D)"')
    if volout_plugin == 'TiledXY|3Dseries' :
       dfmt = '"TIFF (tiled, 3D)"'
+   elif volout_plugin == 'TiledXY|4Dseries' :
+      dfmt = '"TIFF (tiled, 4D)"'
    else :
       dfmt = '"TIFF (tiled, 2D)"'
    # Declare resolutions
