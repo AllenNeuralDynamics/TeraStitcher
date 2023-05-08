@@ -148,7 +148,7 @@ namespace IconImageManager
 
     const double      PI = 3.14159265;                          // pi
     const int         TMITREE_MAX_HEIGHT  = 10;                 // maximum depth of the TMITREE
-    const int         TMITREE_MIN_BLOCK_DIM = 250;              // minimum dimension of TMITREE block along X/Y/Z
+    const int         TMITREE_MIN_BLOCK_DIM = 64;              // minimum dimension of TMITREE block along X/Y/Z
     /*-------------------------------------------------------------------------------------------------------------------------*/
 
     /***************************
